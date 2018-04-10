@@ -27,7 +27,7 @@ void *firstVehicle(int a[])
    		break;
    }
    
-  //printf("First Vehicle is starting from :%d\n",a[0]);
+  
   switch(a[1])
   {
   	case 1:
@@ -43,7 +43,7 @@ void *firstVehicle(int a[])
    		printf("It has to go to South\n");
    		break;
   }
-  //printf("It has to go to :%d\n",a[1]);
+
   
    if(beg1==beg2 ||end1==end2)
     {
@@ -87,7 +87,7 @@ void *secondVehicle(int a[])
    		break;
    }
    
-  //printf("First Vehicle is starting from :%d\n",a[0]);
+ 
   switch(a[1])
   {
   	case 1:
@@ -103,8 +103,7 @@ void *secondVehicle(int a[])
    		printf("It has to go to South\n");
    		break;
   }
-    //printf("\nSecond Vehicle is starting from :%d\n",a[0]);
-	//printf("It has to go to :%d\n",a[1]);
+    
 
     if(beg1==beg2  ||end1==end2)
     {
@@ -137,7 +136,7 @@ int main()
   printf("\t\t\t______________________________\t\t\t\n\n");
   
   printf("Here's an example demonstrating the traffic intersection.\nSteps have been taken in order to prevent collision.\n\n");
-  //printf("Directions:::\nWest=1\nNorth=2\nEast=3\nSouth=4\n");
+ 
   
   int a[2]={0};
   
