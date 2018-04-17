@@ -12,11 +12,11 @@ struct direction
 {
   int vid,origin,destination;
 };
-
+pthread_mutex_t l;
 struct direction object[MAX_VEHICLE];
 void *intersection(void *args)
 {
-
+	pthread_mutex_lock(&l);
    	struct direction *obj=args;
    	int i;
  	for(i=1;i<=vehicle;i++)
@@ -64,6 +64,7 @@ void *intersection(void *args)
       }
     }i++;
 }
+pthread_mutex_unlock(&l);
 }
 enum dir{East=0,West=1,North=2,South=3};
 void *genrateVehicle(void *vehicleInfo)
@@ -111,7 +112,7 @@ int i;
 //pthread_mutex_unlock(&l);
 temp+=1;
 }
-if(temp+=1)
+if(temp==1)
 {
 //pthread_mutex_lock(&l);
 pthread_create(&inter,NULL,intersection,&object);
